@@ -1,0 +1,525 @@
+/* Fonts initailization start*/
+@font-face {
+    font-family: DMSerifText;
+    src:url("../fonts/DMSerifText-Regular.ttf");
+}
+@font-face {
+    font-family: Sofia;
+    src:url("../fonts/Sofia\ Pro\ Regular.ttf");
+} 
+@font-face {
+    font-family: PlayfairDisplay;
+    src:url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+}
+/* Fonts end */
+
+body{
+    background: #fff;
+    font-family: DMSerifText;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.container{
+    display: block;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Navigation styles start */
+
+nav{
+    background: rgb(255, 255, 255);
+    padding: 1em 0;
+    margin: 0 0 3em 0;
+    position: relative;
+    z-index: 2;
+} 
+nav .nav-content{
+    display: flex;
+    margin: 1em 0;
+}
+nav .logo{
+    font-size: 2.5em;
+    font-family: DMSerifText;
+    font-weight: 600;
+    display: block;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+nav .nav-list{
+    display: flex;
+    font-size: 1.25em;
+    font-family: Sofia;
+    margin: 10px 3em 20px 0;
+    font-weight: 600;
+}
+nav .nav-list li{
+    display: block;
+    margin: 0 1.5em;
+    position: relative;
+    overflow: visible;
+}
+
+.nav-list li ul:hover{opacity: 1;visibility: visible;}
+.nav-list li ul{
+    position: fixed;
+    z-index: 5;
+    height: 500px;
+    top: 3.2em;
+    left: 35%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-list li:hover ul{opacity: 1;visibility: visible;}
+nav .nav-list li ul.blog-ul{
+    left: 53%;
+}
+nav .nav-list li ul li{
+    padding: 1em;
+    border: 1px solid #000;
+    background: #fff;
+    width: 100%;
+}
+nav .nav-list a{
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+nav a.sub-btn{
+    display: block;
+    font-size: 1.25em;
+    margin: 10px 3em;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Sofia;
+    text-decoration: none;
+}
+
+a.underline{
+    position: relative;
+}
+a.underline::after{
+    content: '';
+    display: block; 
+    position: absolute;
+    top: 100%;
+    left: -6%;
+    height: 1px;
+    width: 110%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 500ms ease-in-out;
+}
+
+a.underline:hover::after{
+    transform: translateX(-60px) scale(0);
+}
+
+/* Navigation Stlyes End */
+
+/* Header styles start */
+    /* Header styles transferred separate file */
+/* Header styles end */
+
+/* Artist info start */
+.artist{
+    background: rgb(255, 255, 255);
+}
+
+.artist .artist-title{
+    font-size: 4em;
+    font-weight: 700;
+    font-family: PlayfairDisplay,AdobeInvisFont,MyriadPro-Regular;
+    text-align: center;
+    position: relative;
+    color: rgba(0,0,0,0.75);
+    padding: .5em 0 2.5em 0;
+}
+
+.artist .artist-title::after{
+    content: '';
+    position: absolute;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 1px;
+}
+.artist-top-line{
+    position: relative;
+    top: -20px;
+    left: 50%; 
+    height: 120px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 1px;
+    z-index: 5;
+}
+ 
+.artist .artist-title::after{
+    bottom: 0px;
+    left: 50%; 
+}
+
+.artist .artist-info{
+    margin: 1em 0;
+    text-align: center;
+    font-size: 1.75em;
+    line-height: 1.5;
+    font-weight: 600;
+    color: rgba(0,0,0,0.5);
+}
+.artist .artist-showcase{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.artist .artist-showcase .sub-btn{
+    height: max-content;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Sofia;
+}
+.artist .artist-showcase .sub-btn::after,
+.artist .artist-showcase .sub-btn::before{
+    margin: 10px 0;
+}
+
+.artist .artist-showcase img{
+    height: 550px;
+    width: 380px;  
+}
+
+/* Artist info end */
+
+/* Artwork styles start */
+.artwork{
+    background: rgb(255, 255, 255);
+    padding: 1em 0;
+}
+.artwork .artwork-content{}
+.artwork .artwork-title{
+    text-align: center;
+    font-size: 4em;
+    font-family: PlayfairDisplay,AdobeInvisFont,MyriadPro-Regular;
+    font-weight: 700;
+    padding: 2.5em 0;
+    position: relative;
+}
+.artwork .artwork-title::after{
+    content: '';
+    position: absolute;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 2px;
+    bottom: 0px;
+    left: 50%;
+}
+.artwork .artwork-showcase{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+.artwork .artwork-showcase img{
+    height: 400px;
+    width: 350px;
+}
+.artwork .artwork-showcase img:nth-of-type(2){
+    width: 600px;
+}
+
+
+.artwork.blog {
+    background: #eee;
+    padding: 0 0 5em 0;
+    margin: 0;
+}
+
+.artwork.blog .artwork-showcase{
+    justify-content: space-around;
+}
+
+.artwork-showcase .artwork-showcase-cont h5{
+    color: rgba(0,0,0,0.2);
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.artwork-showcase .artwork-showcase-cont p{
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+.artwork .artwork-btn{
+    display: block;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0 auto;
+    width: max-content;
+    position: relative;
+    text-decoration: none;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Sofia;
+
+}
+.artwork .artwork-btn::after{
+    content: '';
+    display: block; 
+    position: absolute;
+    top: 97%;
+    left: -6%;
+    height: 1px;
+    width: 110%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 500ms ease-in-out;
+}
+.artwork .artwork-btn:hover::after{
+    transform: translateX(-60px) scale(0);
+}
+
+/* Artwork styles end */
+
+/* Life Art styles start */
+.life-art{
+    background: #eee;
+    padding: 3em 0;  
+    margin: 5em 0;  
+}
+.life-art .container{
+    margin: 2em 0; 
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.life-art-title{
+    text-align: center;
+    font-size: 4em;
+    font-family: PlayfairDisplay,AdobeInvisFont,MyriadPro-Regular;
+    font-weight: 700;
+    position: relative;
+}
+.life-art-sec{
+    display: flex;
+    padding: 5em 0;
+}
+.life-art-sec .life-art-sec-content{
+    width: 50%;
+    max-width: 610px;
+    margin: 0 auto;
+    line-height: 1.2;
+}
+.life-art-sec .life-art-row{
+}
+.life-art-sec .life-art-row h5{
+    position: relative;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.life-art-sec .life-art-row h5::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.2);
+    width: 200px;
+    bottom: 50%;
+    left: 40%;
+}
+.life-art-sec .life-art-sec-title{
+    font-size: 4em;
+    padding:1em 0 0 0;
+}
+.life-art-sec .life-art-sec-text{
+    font-size: 2em;
+    padding: 1em 0
+
+}
+
+.life-art-sec .life-art-img{
+    width: 50%;
+}
+.life-art-sec .life-art-img img{
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.life-art  .artwork-btn{
+    display: block;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0 auto;
+    width: max-content;
+    position: relative;
+    text-decoration: none;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Sofia;
+
+}
+.life-art .artwork-btn::after{
+    content: '';
+    display: block; 
+    position: absolute;
+    top: 97%;
+    left: -6%;
+    height: 1px;
+    width: 110%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 500ms ease-in-out;
+}
+.life-art.artwork-btn:hover::after{
+    transform: translateX(-60px) scale(0);
+}
+/* Life Art styles end */
+
+ /* Become a volunteer card styles start */
+.card{ 
+    font-family: PlayfairDisplay,AdobeInvisFont,MyriadPro-Regular;
+    padding: 4em 0 7em 0;
+    margin: 2em 0;
+}
+.card .card-content h1:hover {
+    color: #fff;
+    background: #000;
+}
+.card .card-content{
+    display: grid;
+    place-items: center;
+}
+.card .card-content h1{
+    font-size: 4em;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid #000;
+    padding: 0.1em 1em 1.25em 1em;
+    width: max-content;
+    height: 50px;
+}
+ /* Become a volunteer card styles end */
+
+ /* experience card styles start */
+.card.experience{
+    padding: 4em 0;
+    margin: 2em 0;
+}
+
+.card .card-content h1:hover {
+    color: rgb(53, 51, 51);
+    background: #fff;
+    opacity: 1;
+}
+.card .card-content{
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.card.experience .card-content h1{
+    font-size: 2.25em;
+    font-weight: 900;
+    text-align: left;
+    border: 0px solid #000;
+    padding: 0.25em 1em 1.1em 1em;
+    width: max-content;
+    height: auto;
+    opacity: 0.7;
+}
+
+.card.experience .card-content::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: rgba(0, 0, 0, .75);
+    width: 130px;
+    bottom: 0px;
+    left: 45%;
+}
+    
+ /* experience card styles end */
+
+/* Footer styles start */
+footer{
+    background: #eee;
+}
+footer .footer-cont{
+    display: flex;
+    margin: 5em 0;
+}
+footer .footer-content{
+    height: 500px;
+    width: 50%;
+}
+footer .logo{
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 1em .5em;
+}
+footer .logo h1{}
+
+footer .footer-nav{
+    display: flex;
+    font-size: 1.25em;
+    font-family: Sofia;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 2em 0;
+}
+footer .footer-nav .nav-list-one{
+    width: 200px; 
+}
+
+footer .footer-nav .nav-list-one li,
+footer .footer-nav .nav-list-two li {
+    padding: .5em 1em;
+    position: relative;
+    width: 200px;
+}
+footer .footer-nav .nav-list-one li::after{
+ content: ''; 
+ position: absolute;  
+ top: 0;
+ right: 12%;
+ height: 100%;
+ width: 1px;
+ background: rgba(0, 0, 0, 0.2);
+}
+footer .footer-nav .nav-list-two li a,
+footer .footer-nav .nav-list-one li a{
+    text-decoration: none;
+
+}
+footer .social-icons{
+    height: 60px;
+    display: flex;
+    margin: 7em 0;
+}
+
+footer .social-icons img{
+    display: block;
+    margin: 1em;
+    cursor: pointer;
+}
+
+footer .footer-showcase{
+    margin: 1em 0;
+    height: 500px;
+    width: 50%;
+}
+footer .footer-showcase img{
+    height: 100%;
+    width: 100%;
+}
+
+footer .footer-row{
+    margin: 1em 0;
+    width: 100%;
+    font-size: 1.25em;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0,0,0,0.5);
+}
+footer .footer-row h3{}
+footer .footer-row a{
+    color: rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+/* Footer styles end */
